@@ -1,19 +1,5 @@
 # my_github_actions
 Download XXX via GitHub Actions
-
-0. GitHub → Avatar ICON → Settings → Developer settings → Personal access tokens → Tokens (classic)
-   → Generate new token → Generate new token (classic)  → 
-     Note: my_github_actions_token or you_named
-     Expiration： No expiration or you_want
-     Select scopes: repo (all repo)
-   → Generate token → copy token
-   → back this project  → Settings → Secrets and variables → Actions → New repository secret → 
-     Name: MY_GITHUB_ACITONS_TOKEN
-     Secret: paste token
-   → Add secret
-1. Create or modify .github/workflows/xxx.yml, for example modify the application name or version;
-2. Actions → Choise Project ex.'📦 Download Grafana Plugins' → Run workflow → Run workflow → waiting...;
-3. Action Success → Releases → download  you_named.xxx ex.'grafana-plugins-offline.zip'.
 this is template for use github aciton download someting you need.
 
 
@@ -36,7 +22,7 @@ this is template for use github aciton download someting you need.
 ### 1️⃣ 配置工作流（可选：修改插件或版本）
 
 编辑文件：  
-`.github/workflows/download-plugins.yml`
+`.github/workflows/download-grafana-plugins.yml`
 
 你可以：
 - 修改插件版本号
@@ -65,7 +51,7 @@ GitHub Actions 默认权限不足，**必须手动配置 Token 才能创建 Rele
 2. **添加为仓库 Secret**
    - 回到本仓库 → **Settings** → **Secrets and variables** → **Actions**
    - 点击 **New repository secret**
-   - 名称：`CUSTOM_GITHUB_TOKEN`
+   - 名称：`MY_GITHUB_ACTIONS_TOKEN`
    - 值：粘贴你刚复制的 token
    - 点击 **Add secret**
 
